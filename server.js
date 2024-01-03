@@ -1,9 +1,8 @@
-
-var http = require('http');
-var onReceive = function(req, res){
-    res.write("TransFlower Web");
-    res.end();
-};
-var app = http.createServer(onReceive);
-app.listen(9000);
-console.log("Test Web Server is Listening on port 9000");
+var express=require('express');
+var app=express();
+app.use(express.static('public'));
+app.get("/",(req,res)=>{
+ res.send("Welcome to our website");}
+);
+app.listen(8000);
+console.log("App is listenning on port 8000");
