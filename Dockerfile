@@ -1,4 +1,4 @@
-write FROM node:18
+write FROM node:20
 	    WORKDIR /app
 	    COPY package.json /app
 	    RUN npm install
